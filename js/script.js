@@ -36,7 +36,11 @@ var app = new Vue(
                 this.todos.splice(index, 1)
             },
             todoDone(index) {
-                this.todos[index].isDone = true;
+                if(this.todos[index].isDone == false ) {
+                    this.todos[index].isDone = true;
+                } else {
+                    this.todos[index].isDone = false;
+                } 
             }    
         }
     }
