@@ -27,7 +27,7 @@
 
             <!-- Input bar -->
             <div class="input-btn-box">
-                <input v-model="userTodo.name" class="input-bar" type="text" placeholder="Nuovo Todo">
+                <input @keyup.enter="pushUserTodo" v-model="userTodo" class="input-bar" type="text" placeholder="Nuovo Todo">
                 <button @click="pushUserTodo" class="btn">Aggiungi</button>
             </div>
 

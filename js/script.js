@@ -3,9 +3,7 @@ var app = new Vue(
         el : '#root',
         data : {
             // Creo un oggetto vuoto da far popolare all'input dell'utente
-            userTodo : {
-                name : ''
-            },
+            userTodo : '',
             // Creo un Array di oggetti che contenga gli elementi da stampare nella ul
             todos : [
                 {
@@ -21,8 +19,13 @@ var app = new Vue(
         },
         methods : {
             pushUserTodo() {
-                if( this.userTodo.name.length != '') {
-                    this.todos.push(this.userTodo);
+                const userTodoItem = {
+                    name : this.userTodo
+                }
+
+                if( this.userTodo.length != '') {
+                    this.todos.push(userTodoItem);
+                    this.userTodo = '';
                 }
             }    
         }
