@@ -84,8 +84,13 @@ li {
     justify-content: space-between;
 }
 
-/* Cross */
-.cross {
+/* Cross & Star */
+.cross,
+.star {
     cursor: pointer;
 }
 
+/* Active Class */
+.active {
+   background-color: lightgreen;
+}

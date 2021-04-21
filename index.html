@@ -34,7 +34,12 @@
             <!-- ToDo List -->
             <div class="todo-list">
                 <ul>
-                    <li v-for="(todo, index) in todos">{{ todo.name }}<span @click="removeTodo" class="cross"><i class="fas fa-times"></i></span></li>
+                    <li v-for="(todo, index) in todos" :class="{ 'active' : todo.isDone }">{{ todo.name }}
+                        <span>
+                            <span @click="todoDone(index)" class="star"><i class="fas fa-star"></i></span>
+                            <span @click="removeTodo(index)" class="cross"><i class="fas fa-times"></i></span>
+                        </span>
+                    </li>
                 </ul>
             </div>
 
