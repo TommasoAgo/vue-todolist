@@ -21,8 +21,10 @@ var app = new Vue(
         },
         methods : {
             pushUserTodo() {
-                this.todos.push(this.userTodo);
-            }
+                if( this.userTodo.name.length != '') {
+                    this.todos.push(this.userTodo);
+                }
+            }    
         }
     }
 )
