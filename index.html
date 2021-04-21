@@ -27,15 +27,15 @@
 
             <!-- Input bar -->
             <div class="input-btn-box">
-                <input class="input-bar" type="text" placeholder="Nuovo Todo">
-                <button class="btn">Aggiungi</button>
+                <input v-model="userTodo.name" class="input-bar" type="text" placeholder="Nuovo Todo">
+                <button @click="pushUserTodo" class="btn">Aggiungi</button>
             </div>
 
             <!-- ToDo List -->
             <div class="todo-list">
                 <ul>
                     <!-- TEST -->
-                    <li>Ciao sno un todo <span class="cross"><i class="fas fa-times"></i></span></li>
+                    <li v-for=" todo in todos">{{ todo.name }}<span class="cross"><i class="fas fa-times"></i></span></li>
                 </ul>
             </div>
 
