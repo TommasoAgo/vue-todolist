@@ -27,6 +27,9 @@ var app = new Vue(
                     this.todos.push(userTodoItem);
                     this.userTodo = '';
                 }
+            },
+            removeTodo(index) {
+                this.todos.splice(index, 1)
             }    
         }
     }

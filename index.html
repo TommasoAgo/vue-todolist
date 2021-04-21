@@ -34,7 +34,7 @@
             <!-- ToDo List -->
             <div class="todo-list">
                 <ul>
-                    <li v-for="todo in todos">{{ todo.name }}<span class="cross"><i class="fas fa-times"></i></span></li>
+                    <li v-for="(todo, index) in todos">{{ todo.name }}<span @click="removeTodo" class="cross"><i class="fas fa-times"></i></span></li>
                 </ul>
             </div>
 
